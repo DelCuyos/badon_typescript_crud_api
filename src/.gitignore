@@ -1,4 +1,5 @@
 node_modules/
 dist/
-.env
+.envnpm install jsonwebtoken bcryptjs
+npm install -D @types/jsonwebtoken @types/bcryptjs
 config.json
