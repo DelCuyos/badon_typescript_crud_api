@@ -1,39 +1,130 @@
-body {
-    background-color: #f8f9fa;
+/* CSS Rules for Page Display */
+.page { 
+    display: none; 
 }
 
-h1 {
-    font-weight: 700;
+.page.active { 
+    display: block; 
 }
 
-p {
-    font-size: 1.1rem;
+/* Authentication States */
+body.not-authenticated .role-logged-in { 
+    display: none; 
 }
 
-.page {
-    display: none;
-    
+body.authenticated .role-logged-out { 
+    display: none; 
 }
 
-.page.active {
-    display: block;
-    
+/* Admin Role */
+.role-admin { 
+    display: none; 
 }
 
-/* Authentication states */
-body.not-authenticated .role-logged-in {
-    display: none ;
+body.is-admin .role-admin { 
+    display: block; 
 }
 
-body.authenticated .role-logged-out {
-    display: none ;
+/* Additional Styles */
+.navbar-brand { 
+    font-weight: bold; 
 }
 
-/* Admin role */
-.role-admin {
-    display: none ;
+.toast-container { 
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 9999; 
 }
 
-body.is-admin .role-admin {
-    display: block ;
+.modal-backdrop { 
+    z-index: 1040; 
+}
+
+.modal { 
+    z-index: 1050; 
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-badge.pending { 
+    background-color: #ffc107; 
+    color: #000; 
+}
+
+.status-badge.approved { 
+    background-color: #28a745; 
+    color: #fff; 
+}
+
+.status-badge.rejected { 
+    background-color: #dc3545; 
+    color: #fff; 
+}
+
+/* Item Row */
+.item-row { 
+    margin-bottom: 10px; 
+}
+
+/* Form Error */
+.form-error { 
+    color: #dc3545; 
+    font-size: 0.875rem; 
+    margin-top: 0.25rem; 
+}
+
+/* Alert Info */
+.alert-info { 
+    background-color: #d1ecf1; 
+    border-color: #bee5eb; 
+    color: #0c5460; 
+}
+
+/* Card Styles */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+/* Table Responsive */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Button Spacing */
+.btn + .btn {
+    margin-left: 0.25rem;
+}
+
+/* Form Labels */
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Success Messages */
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    min-width: 200px;
+}
+
+.dropdown-header {
+    font-weight: 600;
+    color: #495057;
 }
